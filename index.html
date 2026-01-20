@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- TITLE OF THE PRESENTATION -->
+  <!-- ============================================================ -->
+  <title>
+    WASM in the Enterprise: Secure, Portable, and Ready for Business
+  </title>
+  <!-- ============================================================ -->
+
+  <!-- Set a favicon icon (usually the lab logo) -->
+  <link rel="shortcut icon" href="imgs/chicory1.ico">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="fonts/fontawesome/css/all.css">
+  <link rel="stylesheet" href="fonts/computer-modern/fonts.css">
+
+  <!-- Reveal.js styles -->
+  <link rel="stylesheet" href="packages/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="packages/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="packages/revealjs/dist/theme/simple.css" id="theme">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="packages/revealjs/plugin/highlight/github-gist.css" id="highlight-theme">
+
+  <!-- Custom CSS for the presentation -->
+  <link rel="stylesheet/less" type="text/css" href="css/style.less">
+
+</head>
+
+<body>
+  <!-- Include the presentation from the content Markdown file -->
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        <textarea data-template>
+          # A WASM Primer for the Java Architect
+
+          <img src="./imgs/WebAssembly_Logo.svg" style="height: 15%; width: 15%;"></img>
+
+          #### 2026
+        </textarea>
+      </section>
+
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # What is WebAssembly
+
+            WebAssembly (sometimes abbreviated Wasm) defines a portable binary-code format and a corresponding text format for executable programs as well as software interfaces for facilitating interactions between such programs and their host environment.
+            
+            [https://en.wikipedia.org/wiki/WebAssembly](https://en.wikipedia.org/wiki/WebAssembly)
+          </textarea>
+        </section>
+      </section>
+
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # WASM for the Web
+
+            <img src="imgs/WebAssembly_Logo.svg" style="height: 15%; width: 15%;"></img> &lt3 <img src="imgs/5-2-browsers-free-png-image.png" style="height: 15%; width: 15%;"></img>
+            
+            - **Speed** for CPU-heavy tasks
+            - **Secure** execution through sandboxing
+            - **Standard** as part of the W3C
+          </textarea>
+        </section>
+      </section>
+
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # WASM on the Server Side
+
+            ## <img src="imgs/WebAssembly_Logo.svg" style="height: 15%; width: 15%;"></img>
+
+            - **Standard** as part of the W3C
+            - **Secure** enables running untrusted code
+            - **Polyglot** supports many programming languages
+            - **Embeddable** in many host runtimes
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Embeddable
+            
+            ## with JNI
+
+            - **Distribution** : Makes your app platform-specific
+            - **Runtime** : Execution leaves safety and observability of the JVM
+
+            ## with WASM
+            <br/>
+
+            - Guaranteed Memory Safety
+            - Fault Isolation
+            - Self-contained
+          </textarea>
+        </section>
+      </section>
+
+      <section data-markdown>
+        <textarea data-template>
+          # WASM Users
+
+          <div class="logo-grid">
+            <img src="imgs/companies/akamai.png" alt="Akamai"></img>
+            <img src="imgs/companies/fastly.png" alt="Fastly"></img>
+            <img src="imgs/companies/cloudflare.png" alt="Cloudflare"></img>
+            <img src="imgs/users/spotify.png" alt="Spotify"></img>
+            <img src="imgs/companies/adobe.png" alt="Adobe"></img>
+            <img src="imgs/companies/figma.svg" alt="Figma"></img>
+            <img src="imgs/companies/american-express.png" alt="American Express"></img>
+            <img src="imgs/companies/microsoft.svg" alt="Microsoft"></img>
+            <img src="imgs/companies/google.svg" alt="Google"></img>
+            <img src="imgs/companies/shopify.png" alt="Shopify"></img>
+          </div>
+        </textarea>
+      </section>
+
+
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            # WASM for You
+
+            - Application Extensions/Plugin
+            - Dynamic Loading
+            - Untrusted code execution
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Chicory
+
+            <div style="text-align: center; margin: 2rem 0;">
+              <img src="imgs/chicory1.png" style="height: 30%; width: 30%; filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.2));"></img>
+            </div>
+
+            - Interpreter
+            - Compiler (runtime/build-time)
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Chicory Users
+
+            <div class="logo-grid">
+              <img src="imgs/users/apicurio.png" alt="Apicurio"></img>
+              <img src="imgs/users/camel.svg" alt="Camel"></img>
+              <img src="imgs/users/debezium.png" alt="Debezium"></img>
+              <img src="imgs/users/microks.png" alt="Microks"></img>
+              <img src="imgs/users/openfeature.png" alt="OpenFeature"></img>
+              <img src="imgs/users/ruby.png" alt="Ruby"></img>
+              <img src="imgs/users/spotify.png" alt="Spotify"></img>
+              <img src="imgs/users/trinodb.png" alt="Trino"></img>
+            </div>
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Pre-built Libraries
+
+            - [Open Policy Agent](https://github.com/StyraOSS/opa-java-wasm)
+            - [SQLite4j](https://github.com/roastedroot/sqlite4j)
+            - [QuickJs4J](https://github.com/roastedroot/quickjs4j)
+            - [Protobuf4j](https://github.com/roastedroot/protobuf4j)
+            - [Proxy-Wasm](https://github.com/roastedroot/proxy-wasm-java-host)
+            - ...
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            [chicory.dev](https://chicory.dev)
+            <br/>
+            <img src="imgs/chicory-qr-code.png" style="height: 10%; width: 10%;"></img>
+
+            <img src="imgs/chicory1.png" style="height: 30%; width: 30%;"></img>
+          </textarea>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <!-- Less to compile the style sheet to plain CSS -->
+  <script src="packages/less/less.min.js" type="text/javascript"></script>
+
+  <!-- Import the Reveal.js Javascript code -->
+  <script src="packages/revealjs/dist/reveal.js" type="text/javascript"></script>
+  <!-- Code for the plugins (also need to include them in Reveal.initialize) -->
+  <script src="packages/revealjs/plugin/math/math.js" type="text/javascript"></script>
+  <script src="packages/revealjs/plugin/markdown/markdown.js" type="text/javascript"></script>
+  <script src="packages/revealjs/plugin/highlight/highlight.js" type="text/javascript"></script>
+  <script src="packages/revealjs/plugin/notes/notes.js" type="text/javascript"></script>
+
+  <!-- Configure Reveal.js -->
+  <script>
+    Reveal.initialize({
+      katex: {
+        local: 'packages/katex',
+      },
+      plugins: [RevealMarkdown, RevealMath.KaTeX, RevealHighlight, RevealNotes],
+      width: 1920,
+      height: 1080,
+      margin: 0.1,
+      // Bounds for smallest/largest possible scale to apply to content
+      minScale: 0.1,
+      maxScale: 2.0,
+      // Play videos automatically when displaying a slide
+      autoPlayMedia: true,
+      // Vertical centering of slides
+      center: true,
+      // Transition style
+      transition: 'none', // none/fade/slide/convex/concave/zoom
+      // Transition speed
+      transitionSpeed: 'default', // default/fast/slow
+      // Transition style for full page slide backgrounds
+      backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+      // Display presentation control arrows
+      controls: true,
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'bottom-right',
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+      // Display the page number of the current slide
+      // - "c/t":   Flattened slide number / total slides
+      slideNumber: "c/t",
+      // Add the current slide number to the URL hash so that reloading the
+      // page/copying the URL will return you to the same slide
+      hash: true,
+      // Flags if we should monitor the hash and change slides accordingly
+      respondToHashChanges: true,
+      // Turns fragments on and off globally
+      fragments: true,
+      // Flags whether to include the current fragment in the URL,
+      // so that reloading brings you to the same fragment position
+      fragmentInURL: true,
+      // Push each slide change to the browser history.  Implies `hash: true`
+      history: false,
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+      // Enables touch navigation on devices with touch input
+      touch: true,
+      // Loop the presentation
+      loop: false,
+      // Changes the behavior of our navigation directions.
+      // "default"
+      // Left/right arrow keys step between horizontal slides, up/down
+      // arrow keys step between vertical slides. Space key steps through
+      // all slides (both horizontal and vertical).
+      // "linear"
+      // Removes the up/down arrows. Left/right arrows step through all
+      // slides (both horizontal and vertical).
+      // "grid"
+      // When this is enabled, stepping left/right from a vertical stack
+      // to an adjacent vertical stack will land you at the same vertical
+      // index.
+      navigationMode: 'linear',
+      // Flags if we should show a help overlay when the question-mark
+      // key is pressed
+      help: true,
+      // Flags if it should be possible to pause the presentation (blackout)
+      pause: false,
+      // Flags if speaker notes should be visible to all viewers
+      //showNotes: false,
+      // Enable slide navigation via mouse wheel
+      mouseWheel: false,
+      // The maximum number of pages a single slide can expand onto when printing
+      // to PDF, unlimited by default (Number.POSITIVE_INFINITY)
+      pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+      // Prints each fragment on a separate slide
+      pdfSeparateFragments: true,
+      // Offset used to reduce the height of content within exported PDF pages.
+      // This exists to account for environment differences based on how you
+      // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+      // on precisely the total height of the document whereas in-browser
+      // printing has to end one pixel before.
+      pdfPageHeightOffset: -1,
+      // forward every 15 seconds
+      // autoSlide: 15000,
+      // stop at the end
+      loop: false
+    });
+  </script>
+
+</body>
+
+</html>
